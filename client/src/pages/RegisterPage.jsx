@@ -31,13 +31,13 @@ function Register() {
         {registerErrors.map((error, i) => (
           <Message message={error} key={i} />
         ))}
-        <h1 className="text-3xl font-bold">Register</h1>
+        <h1 className="text-3xl font-bold">Registrese</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Label htmlFor="username">Username:</Label>
           <Input
             type="text"
             name="username"
-            placeholder="Write your name"
+            placeholder="Escribe tu nombre"
             {...register("username")}
             autoFocus
           />
@@ -48,7 +48,7 @@ function Register() {
           <Label htmlFor="email">Email:</Label>
           <Input
             name="email"
-            placeholder="youremail@domain.tld"
+            placeholder="ejemplo@domain.com"
             {...register("email")}
           />
           {errors.email?.message && (
@@ -76,10 +76,10 @@ function Register() {
           {errors.confirmPassword?.message && (
             <p className="text-red-500">{errors.confirmPassword?.message}</p>
           )}
-          <Button>Submit</Button>
+          <Button>Enviar</Button>
         </form>
         <p>
-          Already Have an Account?
+          Ya tienes cuenta?
           <Link className="text-sky-500" to="/login">
             Login
           </Link>

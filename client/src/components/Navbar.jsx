@@ -4,12 +4,12 @@ import { ButtonLink } from "./ui/ButtonLink";
 
 export function Navbar() {
   const { isAuthenticated, logout, user } = useAuth();
-  console.log(isAuthenticated, user)
+  console.log(isAuthenticated, user);
 
   return (
-    <nav className="bg-zinc-700 my-3 flex justify-between py-5 px-10 rounded-lg">
+    <nav className="bg-white bg-opacity-50 my-3 flex justify-between py-5 px-10 rounded-lg shadow-lg backdrop-filter backdrop-blur-md">
       <h1 className="text-2xl font-bold">
-        <Link to={isAuthenticated ? "/tasks" : "/"}>Task Manager</Link>
+        <Link to={isAuthenticated ? "/tasks" : "/"}>Web Viajeros</Link>
       </h1>
       <ul className="flex gap-x-2">
         {isAuthenticated ? (
@@ -18,7 +18,7 @@ export function Navbar() {
               Welcome {user.username}
             </li>
             <li>
-              <ButtonLink to="/add-task">Add Task</ButtonLink>
+              <ButtonLink to="/add-task">Agregar reseña</ButtonLink>
             </li>
             <li>
               <Link to="/" onClick={() => logout()}>

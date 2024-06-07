@@ -59,28 +59,28 @@ export function TaskFormPage() {
   return (
     <Card>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Label htmlFor="title">Title</Label>
+        <Label htmlFor="title">Nombre del restaurante</Label>
         <Input
           type="text"
           name="title"
-          placeholder="Title"
+          placeholder="Nombre del restaurante"
           {...register("title")}
           autoFocus
         />
         {errors.title && (
-          <p className="text-red-500 text-xs italic">Please enter a title.</p>
+          <p className="text-red-500 text-xs italic">Por favor ingrese un nombre.</p>
         )}
 
-        <Label htmlFor="description">Description</Label>
+        <Label htmlFor="description">Descripcion de la reseña</Label>
         <Textarea
           name="description"
           id="description"
           rows="3"
-          placeholder="Description"
+          placeholder="Ingrese una descripción"
           {...register("description")}
         ></Textarea>
 
-        <Label htmlFor="date">Date</Label>
+        <Label htmlFor="date">Fecha</Label>
         <Input type="date" name="date" {...register("date")} />
         <Button>Save</Button>
       </form>

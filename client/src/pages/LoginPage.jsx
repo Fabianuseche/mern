@@ -39,7 +39,7 @@ export function LoginPage() {
             label="Write your email"
             type="email"
             name="email"
-            placeholder="youremail@domain.tld"
+            placeholder="ejemplo@domain.com"
             {...register("email", { required: true })}
           />
           <p>{errors.email?.message}</p>
@@ -48,7 +48,7 @@ export function LoginPage() {
           <Input
             type="password"
             name="password"
-            placeholder="Write your password"
+            placeholder="Escribe tu contraseña"
             {...register("password", { required: true, minLength: 6 })}
           />
           <p>{errors.password?.message}</p>
@@ -57,7 +57,8 @@ export function LoginPage() {
         </form>
 
         <p className="flex gap-x-2 justify-between">
-          Don't have an account? <Link to="/register" className="text-sky-500">Sign up</Link>
+          No tienes cuenta? <Link to="/register" className="text-sky-500">Inicia sesión</Link>
+
         </p>
       </Card>
     </div>

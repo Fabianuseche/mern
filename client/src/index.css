@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 body {
-  background: #202020;
+  
+  background-image: url(../../client/src/assets/sea1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   color: white;
 }
 

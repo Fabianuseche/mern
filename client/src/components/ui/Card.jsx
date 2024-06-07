@@ -1,3 +1,10 @@
 export function Card({ children }) {
-  return <div className="bg-zinc-800 max-w-md w-full p-10 rounded-md">{children}</div>;
+  return (
+    <div
+      className="max-w-md w-full p-10 rounded-md"
+      style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+    >
+      {children}
+    </div>
+  );
 }
